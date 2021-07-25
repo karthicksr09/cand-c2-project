@@ -1,0 +1,49 @@
+﻿Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+Increased_Cost Estimate,US East (N. Virginia),NAT Gateway Estimate,Amazon Virtual Private Cloud (VPC),0,2336.85,28042.2,USD,Number of NAT Gateways (1)
+Increased_Cost Estimate,US East (N. Virginia),Load Balancer Estimate,Application Load Balancer,0,852.05,10224.6,USD,Number of Application Load Balancers (2)
+Increased_Cost Estimate,US East (N. Virginia),1 yr Savings plan EC2 Estimate,Amazon EC2,0,1461.28,17535.36,USD,"Operating system (Linux), Quantity (16), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage amount (30 GB), Instance type (m5.xlarge)"
+Increased_Cost Estimate,US East (N. Virginia),On Demand EC2 Estimate,Amazon EC2,0,270.29,3243.48,USD,"Operating system (Linux), Quantity (6), Pricing strategy (On-Demand Instances), Storage amount (30 GB), Instance type (m5.xlarge)"
+Increased_Cost Estimate,US East (N. Virginia),S3 and S3 IA Estimate,S3 Standard,0,1378.19,16538.28,USD,S3 Standard storage (50 TB per month)
+Increased_Cost Estimate,US East (N. Virginia),S3 and S3 IA Estimate,S3 Intelligent - Tiering,0,389.12,4669.44,USD,S3 INT storage (20 TB per month)
+Increased_Cost Estimate,US East (N. Virginia),S3 and S3 IA Estimate,Data Transfer,0,0,0,USD,
+Increased_Cost Estimate,US East (N. Virginia),RDS MySQL Estimate,Amazon RDS for MySQL,0,7026.4,84316.8,USD,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (5 TB), Quantity (4), Instance type (db.m1.large), Deployment option (Multi-AZ), Pricing strategy (OnDemand), Additional backup storage (10 TB)"
+Increased_Cost Estimate,US East (N. Virginia),CloudWatch Estimate,Amazon CloudWatch,0,410.375,4924.5,USD,"Number of Metrics (includes detailed and custom metrics) (20), GetMetricData: Number of metrics requested (200000), GetMetricWidgetImage: Number of metrics requested (200000), Number of other API requests (2000000), Standard Logs: Data Ingested (500 GB), Vended Logs: Data Ingested (250 GB)"
+Increased_Cost Estimate,US West (Oregon),RDS MySQL Estimate - Read Replica for Redundancy,Amazon RDS for MySQL,0,3513.2,42158.4,USD,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (5 TB), Quantity (2), Instance type (db.m1.large), Deployment option (Multi-AZ), Pricing strategy (OnDemand), Additional backup storage (5 TB)"
+Increased_Cost Estimate,US West (Oregon),S3 and S3 IA Estimate - Replica for Redundancy,S3 Standard,0,1378.19,16538.28,USD,S3 Standard storage (50 TB per month)
+Increased_Cost Estimate,US West (Oregon),S3 and S3 IA Estimate - Replica for Redundancy,S3 Intelligent - Tiering,0,389.12,4669.44,USD,S3 INT storage (20 TB per month)
+Increased_Cost Estimate,US West (Oregon),S3 and S3 IA Estimate - Replica for Redundancy,Data Transfer,0,0,0,USD,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Acknowledgement,,,,,,,,
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Add CloudFront cost of $600 and the total cost will be around $20000,,,,,,,,
+,,,,,,,,
+The changes are as follows when compared to the initial configuration,,,,,,,,
+EC2 Savings - 16 instances - Instance count increased to 16 from 8 and also the size changed from m4 to m5 and xlarge from large,,,,,,,,
+"EC2 onDemand - 6 instances, m5.xlarge, Instance count reduced since the savings instance count increased. But here also the type changed to m5.xlarge from m4.large",,,,,,,,
+RDS - Multizone with 10 TB backup - Increased the back up size from 5 tb to 10 tb,,,,,,,,
+S3 - Standard 50TB and INT 20 TB. Used lifecycle to move between the different types of buckets,,,,,,,,
+Cloudwatch logs -No change,,,,,,,,
+RDS - Replica introduced in a different region with multizone 5 tb backup,,,,,,,,
+S3 replica introduced to use both standard for 50 tb and intelligent tiering for 20 tb to move the data amongst the different tiers,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Location,Service,Initial Cost,Reduced Cost,Increased Cost,,,,
+N.Virginia,Load Balancer,Same Configuration with 2 LB and one NAT Gateway allowing 50 TB data per month,,,,,,
+,VPC,,,,,,,
+,EC2 - Savings plan,"12 instances, m4.large","8 instances, m4.large","16 instances, m5.xlarge",,,,
+,EC2 - OnDemand Instances,"8 instances, m4.large","2 instances, m4.large","6 instances, m5.xlarge",,,,
+,RDS,Multizone with 5TB backup,Single Zone with 500 GB backup,Multizone with 10 TB backup,,,,
+,S3,"Standard 5 TB, IA 5 TB",Int Storage 50 TB,"Standard 50 TB, INT 20 TB",,,,
+,Cloud Front,Same Configuration - With one SSL Certificate (Approx. $600),,,,,,
+,Cloud Watch,"Standard Logs - 500 GB, Vended logs 250 GB",Standard Logs - 200 GB Vended Logs - 100 GB,"Standard Logs - 500 GB, Vended logs 250 GB",,,,
+Oregon,RDS - Replica,None,,Multizone with 5 TB backup,,,,
+,S3 Replica,,,"Standard 50 TB, INT 20 TB",,,,

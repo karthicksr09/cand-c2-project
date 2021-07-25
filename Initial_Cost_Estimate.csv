@@ -1,0 +1,18 @@
+﻿Group hierarchy,Region,Description,Service,Upfront,Monthly,First 12 months total,Currency,Configuration summary
+Initial_Cost_Estimate,US East (N. Virginia),NAT Gateway Estimate,Amazon Virtual Private Cloud (VPC),0,2336.85,28042.2,USD,Number of NAT Gateways (1)
+Initial_Cost_Estimate,US East (N. Virginia),Load Balancer Estimate,Application Load Balancer,0,852.05,10224.6,USD,Number of Application Load Balancers (2)
+Initial_Cost_Estimate,US East (N. Virginia),1 yr Savings plan EC2 Estimate,Amazon EC2,0,579.12,6949.44,USD,"Operating system (Linux), Quantity (12), Pricing strategy (EC2 Instance Savings Plans 1 Year No Upfront), Storage amount (30 GB), Instance type (m4.large)"
+Initial_Cost_Estimate,US East (N. Virginia),On Demand EC2 Estimate,Amazon EC2,0,140.8,1689.6,USD,"Operating system (Linux), Quantity (8), Pricing strategy (On-Demand Instances), Storage amount (30 GB), Instance type (m4.large)"
+Initial_Cost_Estimate,US East (N. Virginia),S3 and S3 IA Estimate,S3 Standard,0,1378.19,16538.28,USD,S3 Standard storage (50 TB per month)
+Initial_Cost_Estimate,US East (N. Virginia),S3 and S3 IA Estimate,S3 Standard - Infrequent Access,0,107.53,1290.36,USD,S3 Infrequent Access storage (5 TB per month)
+Initial_Cost_Estimate,US East (N. Virginia),S3 and S3 IA Estimate,Data Transfer,0,0,0,USD,
+Initial_Cost_Estimate,US East (N. Virginia),RDS MySQL Estimate,Amazon RDS for MySQL,0,3513.2,42158.4,USD,"Storage for each RDS instance (General Purpose SSD (gp2)), Storage amount (5 TB), Quantity (2), Instance type (db.m1.large), Deployment option (Multi-AZ), Pricing strategy (OnDemand), Additional backup storage (5 TB)"
+Initial_Cost_Estimate,US East (N. Virginia),CloudWatch Estimate,Amazon CloudWatch,0,394.375,4732.5,USD,"Number of Metrics (includes detailed and custom metrics) (10), GetMetricData: Number of metrics requested (100000), GetMetricWidgetImage: Number of metrics requested (100000), Number of other API requests (1000000), Standard Logs: Data Ingested (500 GB), Vended Logs: Data Ingested (250 GB)"
+,,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Acknowledgement,,,,,,,,
+"* AWS Pricing Calculator provides only an estimate of your AWS fees and doesn't include any taxes that might apply. Your actual fees depend on a variety of factors, including your actual usage of AWS services.",,,,,,,,
+,,,,,,,,
+,,,,,,,,
+Add cloud front cost of Approx $600 and total cost will be around $10000,,,,,,,,
