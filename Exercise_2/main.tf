@@ -18,4 +18,9 @@ resource "aws_lambda_function" "greet_lambda" {
     security_group_ids = [var.secGrpId]
   }
   runtime = "python3.7"
+  environment {
+    variables = {
+      greeting = "Greetings!!! Welcome to Lambda..."
+    }
+  }
 }
